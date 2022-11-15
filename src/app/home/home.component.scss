@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+// -------------------------TITLE AND TOUCH ICON ------------------------------------------------------------------------
+
+.title h1{
+    font-size: 36px;
+    font-family: 'Lato', sans-serif;
+    margin-top:8em;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+
+    /* Styling the text and giving it gradiant */
+    color:#ffffff;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+
+    /* Make sure text is infront of background images */
+    display:block;
+    position: relative;
+    z-index: 3;
+    opacity: 0.8;
+    animation: 3s ease-in forwards fade-in-title;
+}
+
+.touch-icon {
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    display: block;
+    position: relative;
+    z-index: 3;
+    color: rgba(255, 255, 255, 1);
+    scale: 1.6;
+    filter: brightness(50%);
+    animation: 3s ease-in fade-in-hand, 1500ms ease-in infinite forwards pulse;
+}
+
+.animate-end {
+    transform: scale(1.7);
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-name: fade-out-hand;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-out-title {
+    0% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+
+@keyframes fade-out-hand {
+    0% { opacity: 0.7; }
+    100% { opacity: 0; }
+}
+
+@keyframes fade-in-title {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes fade-in-hand {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1.7);
+	}
+
+	70% {
+		transform: scale(2);
+	}
+
+	100% {
+		transform: scale(1.7);
+	}
+}
+
+// -------------------------------------NAVBAR-----------------------------------------------------------------
+
+.bring-nav-in {
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-name: fade-spotify-in;
+    animation-fill-mode: forwards;
+}
+
+.navbar-wrapper {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+} 
+
+.navbar {
+    margin-right: 20px;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    margin-top: 100px;
+    visibility: hidden;
+}
+
+.bring-navbar-in {
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-name: fade-navbar-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-navbar-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; visibility: visible; }
+}
+
+// -------------------------------------AUDIO PLAYER----------------------------------------------------
+
+.spotify-wrapper {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+}
+
+.spotify {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    width: 600px;
+    margin-top: 300px;
+    visibility: hidden;
+}
+
+.bring-spotify-in {
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-name: fade-spotify-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-spotify-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; visibility: visible; }
+}
+
+// -------------------CLOUDS, STARS, AND TWINKLING--------------------------------------------------------
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+  overflow: hidden;
+}
+
+.stars {
+    background:#000 url(../../assets/images/stars.png) repeat top center;
+    z-index:0;
+}
+  
+.twinkling{
+    background:transparent url(../../assets/images/twinkling.png) repeat top center;
+    z-index:1;
+    animation:move-twink-back 200s linear infinite;
+}
+  
+.clouds{
+    background:transparent url(../../assets/images/clouds.png) repeat top center;
+    z-index:2;
+    opacity: .4;
+    animation:move-clouds-back 200s linear infinite;
+}
+
+// -----------------------------MOON--------------------------------------------------------------
+
+.moon {
+    width: 125px;
+    height: 125px;
+    z-index: 3;
+    border-radius: 50%;
+    background-color: #F5FFFA;
+    box-shadow: 0 0 75px #F5FFFA;
+    position: absolute;
+    left: 85%;
+    top: 100px;
+    animation: myMoon 3000ms ease;
+}
+
+@keyframes myMoon {
+    0% {
+        left: 65%;
+        top: 300px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 85%;
+        top: 100px;
+        opacity: 1;
+    }
+}
+
+// -------------------------------------GRASS--------------------------------------------------------
+
+.grass {
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    opacity: 0;
+    animation: slide-up 3000ms forwards ease;
+}
+
+.grass::-webkit-scrollbar {
+    display: none;
+    background: transparent; /* Chrome/Safari/Webkit */
+    width: 0px;
+  }  
+  
+@keyframes slide-up {
+    0% {
+      opacity: 0;
+      bottom: -300px;
+    }
+  
+    100% {
+      opacity: 1;
+      bottom: 0;
+    }
+}
+  
+@keyframes slide-down {
+    0% {
+      opacity: 0.8;
+      bottom: 0;
+    }
+  
+    100% {
+      opacity: 0;
+      bottom: -300px;
+    }
+}
+
+.grass img {
+    height: 220px;
+    width: 50%;
+    opacity: 1;
+    filter: brightness(40%);
+}
+
+// ----------------------------SHOOTING STARS-------------------------------------------------
+
+$shooting-time: 3000ms;
+
+.night {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(140deg);
+    /* animation: sky 200000ms linear infinite; */
+  }
+  
+  .shooting_star {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    // width: 100px;
+    height: 1.8px;
+    background: linear-gradient(-60deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+    border-radius: 999px;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+    animation:
+      tail $shooting-time ease-in-out infinite,
+      shooting $shooting-time ease-in-out infinite;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(30% - 1px);
+      right: 0;
+      // width: 30px;
+      height: 2px;
+      background: linear-gradient(-60deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+      transform: translateX(50%) rotateZ(60deg);
+      border-radius: 100%;
+      animation: shining $shooting-time ease-in-out infinite;
+    }
+  
+    &::after {
+      // CodePen Error
+      // @extend .shooting_star::before;
+      
+      content: '';
+      position: absolute;
+      top: calc(30% - 1px);
+      right: 0;
+      // width: 30px;
+      height: 2px;
+      background: linear-gradient(-60deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+      transform: translateX(50%) rotateZ(45deg);
+      border-radius: 100%;
+      animation: shining $shooting-time ease-in-out infinite;
+      transform: translateX(60%) rotateZ(-45deg);
+    }
+    
+    @for $i from 1 through 15 {
+      &:nth-child(#{$i}) {
+        $delay: random(4000) + 0ms;
+        top: calc(110% - #{random(400) - 300px});
+        left: calc(70% - #{random(300) + 100px});
+        animation-delay: $delay;
+        // opacity: random(50) / 100 + 0.5;
+        
+        &::before,
+        &::after {
+          animation-delay: $delay;
+        }
+      }
+    }
+  }
+  
+  @keyframes tail {
+    0% {
+      width: 0;
+    }
+    
+    30% {
+      width: 100px;
+    }
+    
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes shining {
+    0% {
+      width: 0;
+    }
+    
+    50% {
+      width: 30px;
+    }
+    
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes shooting {
+    0% {
+      transform: translateX(0);
+    }
+    
+    100% {
+      transform: translateX(300px);
+    }
+  }
+
