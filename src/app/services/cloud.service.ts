@@ -29,12 +29,6 @@ export class CloudService {
         cover: "../../assets/images/I-Don't-Wanna-Do-This-Anymore.png"
     },
     {
-        name: "Hours in Silence",
-        url: "../../assets/musics/Hours-In-Silence.mp3",
-        artist: "Drake",
-        cover: "../../assets/images/Hours-In-Silence.png"
-    },
-    {
         name: "Star Shopping",
         url: "../../assets/musics/Star-Shopping.mp3",
         artist: "Lil Peep",

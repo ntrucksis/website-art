@@ -1,12 +1,12 @@
 <div class="container">
     <mat-toolbar color="primary" class="main-toolbar">
-      <span>Audio Player</span>
+      <span>Heavy Vibes</span>
     </mat-toolbar>
     <div class="content">
         <div class="logo">
           <img *ngIf="currentFile.file" src={{currentFile.file.cover}}/>
-          <!--<mat-icon>music_note</mat-icon>-->
-          <div>Audio Player</div>
+          <mat-icon *ngIf="!currentFile.file">music_note</mat-icon>
+          <div *ngIf="currentFile.file">{{currentFile.file.name}} - {{currentFile.file.artist}}</div>
       </div>
       <mat-list color="primary">
         <h3 mat-subheader>Songs</h3>

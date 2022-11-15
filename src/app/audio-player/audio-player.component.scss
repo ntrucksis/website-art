@@ -1,6 +1,3 @@
-body {
-
-}
 
 .container {
   width: 100%;
@@ -8,8 +5,47 @@ body {
   display: block;
 }
 
+
 .logo {
+  margin: 1.5rem 1.5rem 0 1.5rem;
   height: 200px;
+  text-align: center;
+}
+
+.logo mat-icon {
+  color: #3f51b5;
+  height: 160px !important;
+  width: 160px !important;
+  font-size: 160px !important;
+}
+
+.logo div {
+  font-size: 24px;
+  color: #3f51b5;
+}
+
+.logo img {
+  margin: 1rem;
+  width: 50%;
+  height: 60%;
+}
+
+.media-footer {
+  .time-slider {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .media-action-bar {
+    width: 100%;
+    padding-bottom: 1.5rem;
+    justify-content: center;
+    .mat-icon {
+        height: 48px !important;
+        width: 48px !important;
+        font-size: 48px !important;
+    }
+}
 }
 /*.container {
     .main-toolbar {
