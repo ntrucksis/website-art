@@ -24,15 +24,15 @@ export class CloudService {
     },
     {
         name: "I Don't Wanna Do This Anymore",
-        url: "../../assets/musics/I-Don't-Wanna-Do-This-Anymore",
+        url: "../../assets/musics/I-Dont-Wanna-Do-This-Anymore.mp3",
         artist: 'XXXTentacion',
-        cover: "../../assets/images/I-Don't-Wanna-Do-This-Anymore.png"
+        cover: "../../assets/images/I-Dont-Wanna-Do-This-Anymore.png"
     },
     {
         name: "Star Shopping",
         url: "../../assets/musics/Star-Shopping.mp3",
         artist: "Lil Peep",
-        cover: "../../assets/images.Star-Shopping.png"
+        cover: "../../assets/images/Star-Shopping.png"
     },
     {
         name: "Crybaby",

@@ -1,8 +1,15 @@
+.main-toolbar {
+  span {
+    color: white;
+  }
+}
 
 .container {
   width: 100%;
   height: 100%;
   display: block;
+  background: transparent;
+  overflow-y: scroll;
 }
 
 

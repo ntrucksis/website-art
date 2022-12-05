@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, Inject } from '@angular/core';
+import { AudioPlayerComponent } from '../audio-player/audio-player.component';
 
 @Component({
   selector: 'app-home',
