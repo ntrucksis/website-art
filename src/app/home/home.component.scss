@@ -415,3 +415,42 @@ $shooting-time: 3000ms;
     }
   }
 
+//------------------------------Responsive for Iphones---------------------------------------
+@media only screen and (max-width: 600px) {
+  #right-grass {
+    display: none;
+  }
+  #left-grass {
+    width: 100%;
+  }
+  .moon {
+    left: 60%;
+    top: 10%;
+    animation: phoneMoon 3000ms ease;
+  }
+  .navbar-wrapper {
+    width: 300px;
+  }
+  .spotify {
+    margin-top: 280px;
+    width: 80%;
+  }
+  .grass img {
+    height: 200px;
+  }
+}
+
+
+@keyframes phoneMoon {
+  0% {
+      left: 20%;
+      top: 40%;
+      opacity: 0;
+  }
+
+  100% {
+      left: 60%;
+      top: 10%;
+      opacity: 1;
+  }
+}
