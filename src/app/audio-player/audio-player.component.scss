@@ -1,22 +1,58 @@
-.main-toolbar {
-  span {
-    color: white;
-  }
+html {
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: #3f51b548;
+  overflow: hidden;
 }
 
-.container {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+div.container {
   width: 100%;
   height: 100%;
   display: block;
-  background: transparent;
-  overflow-y: scroll;
+  background: black;
+  mat-list {
+    cursor: pointer;
+  }
 }
 
+div.media-footer mat-toolbar {
+  background-color: black;
+  mat-toolbar-row {
+    color: #3f51b5;
+  }
+  mat-toolbar-row button {
+    color: #3f51b5;
+  }
+  mat-slider {
+    color: #3f51b5;
+  }
+}
+
+mat-toolbar {
+  background-color: black;
+  span {
+    color: #3f51b5;
+  }
+}
+
+.content mat-list-item {
+  color: #3f51b5;
+}
 
 .logo {
   margin: 1.5rem 1.5rem 0 1.5rem;
   height: 200px;
   text-align: center;
+}
+
+.content mat-list h3 {
+  color: #3f51b5;
 }
 
 .logo mat-icon {

@@ -39,6 +39,12 @@ export class CloudService {
         url: "../../assets/musics/Crybaby.mp3",
         artist: "Lil Peep",
         cover: "../../assets/images/Crybaby.png"
+    },
+    {
+      name: "Edge of Seventeen",
+      url: "../../assets/musics/Edge-Of-17.mp3",
+      artist: "Stevie Nicks",
+      cover: "../../assets/images/stevie.png"
     }
   ];
 

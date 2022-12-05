@@ -3,7 +3,8 @@
     padding: 0;
 }
 
-body {
+html body {
+    cursor: default;
     height: 100%;
     width: 100%;
     position:absolute;
@@ -169,6 +170,7 @@ body {
     width: 375px;
     margin-top: 200px;
     visibility: hidden;
+    padding-bottom: 10px;
 }
 
 .bring-spotify-in {
@@ -209,7 +211,7 @@ body {
 
 .stars {
     background:#000 url(../../assets/images/stars.png) repeat top center;
-    z-index:0;
+    z-index:1;
 }
   
 .twinkling{
@@ -220,7 +222,7 @@ body {
   
 .clouds{
     background:transparent url(../../assets/images/clouds.png) repeat top center;
-    z-index:2;
+    z-index:1;
     opacity: .4;
     animation:move-clouds-back 200s linear infinite;
 }
@@ -286,7 +288,7 @@ body {
   
 @keyframes slide-down {
     0% {
-      opacity: 0.8;
+      opacity: 1;
       bottom: 0;
     }
   
@@ -297,10 +299,10 @@ body {
 }
 
 .grass img {
-    height: 220px;
+    height: 250px;
     width: 50%;
     opacity: 1;
-    filter: brightness(40%);
+    filter: brightness(20%);
 }
 
 // ----------------------------SHOOTING STARS-------------------------------------------------
